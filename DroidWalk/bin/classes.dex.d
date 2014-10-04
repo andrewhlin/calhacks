@@ -1,8 +1,27 @@
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes.dex : \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$string.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$integer.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$styleable.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$id.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$drawable.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$color.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$layout.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/Manifest$permission.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/BuildConfig.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/MyAptivity.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/Manifest.class \
 /home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$attr.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/example/myapp/R$style.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$string.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$integer.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$styleable.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$id.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$drawable.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$color.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$attr.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/classes/com/google/android/gms/R$style.class \
+/home/andrew/calhack/calhacks/DroidWalk/bin/dexedLibs/classes-7425cf1890b30c8fcb567a5d5aa5f2f8.jar \
+/home/andrew/calhack/calhacks/DroidWalk/bin/dexedLibs/android-support-v4-815dcb4ddfd137e41eaa7ea650170c0a.jar \
+/home/andrew/calhack/calhacks/DroidWalk/bin/dexedLibs/google-play-services-aaea6ba30ac97c612a200cd9a5b8cf15.jar \
