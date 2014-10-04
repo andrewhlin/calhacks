@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F43331D619DFDD270038F491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43331D519DFDD270038F491 /* AppDelegate.swift */; };
+		F43331D819DFDD270038F491 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43331D719DFDD270038F491 /* Images.xcassets */; };
+		F43331DB19DFDD270038F491 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43331D919DFDD270038F491 /* LaunchScreen.xib */; };
+		F43331E719DFDD270038F491 /* BearWalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43331E619DFDD270038F491 /* BearWalkTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F43331E119DFDD270038F491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43331C819DFDD270038F491 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43331CF19DFDD270038F491;
+			remoteInfo = BearWalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F43331D019DFDD270038F491 /* BearWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43331D419DFDD270038F491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43331D519DFDD270038F491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F43331D719DFDD270038F491 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F43331DA19DFDD270038F491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F43331E019DFDD270038F491 /* BearWalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearWalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43331E519DFDD270038F491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43331E619DFDD270038F491 /* BearWalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearWalkTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F43331CD19DFDD270038F491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43331DD19DFDD270038F491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F43331C719DFDD270038F491 = {
+			isa = PBXGroup;
+			children = (
+				F43331D219DFDD270038F491 /* BearWalk */,
+				F43331E319DFDD270038F491 /* BearWalkTests */,
+				F43331D119DFDD270038F491 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F43331D119DFDD270038F491 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F43331D019DFDD270038F491 /* BearWalk.app */,
+				F43331E019DFDD270038F491 /* BearWalkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F43331D219DFDD270038F491 /* BearWalk */ = {
+			isa = PBXGroup;
+			children = (
+				F43331D519DFDD270038F491 /* AppDelegate.swift */,
+				F43331D719DFDD270038F491 /* Images.xcassets */,
+				F43331D919DFDD270038F491 /* LaunchScreen.xib */,
+				F43331D319DFDD270038F491 /* Supporting Files */,
+			);
+			path = BearWalk;
+			sourceTree = "<group>";
+		};
+		F43331D319DFDD270038F491 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F43331D419DFDD270038F491 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F43331E319DFDD270038F491 /* BearWalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F43331E619DFDD270038F491 /* BearWalkTests.swift */,
+				F43331E419DFDD270038F491 /* Supporting Files */,
+			);
+			path = BearWalkTests;
+			sourceTree = "<group>";
+		};
+		F43331E419DFDD270038F491 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F43331E519DFDD270038F491 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F43331CF19DFDD270038F491 /* BearWalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43331EA19DFDD270038F491 /* Build configuration list for PBXNativeTarget "BearWalk" */;
+			buildPhases = (
+				F43331CC19DFDD270038F491 /* Sources */,
+				F43331CD19DFDD270038F491 /* Frameworks */,
+				F43331CE19DFDD270038F491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BearWalk;
+			productName = BearWalk;
+			productReference = F43331D019DFDD270038F491 /* BearWalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F43331DF19DFDD270038F491 /* BearWalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43331ED19DFDD270038F491 /* Build configuration list for PBXNativeTarget "BearWalkTests" */;
+			buildPhases = (
+				F43331DC19DFDD270038F491 /* Sources */,
+				F43331DD19DFDD270038F491 /* Frameworks */,
+				F43331DE19DFDD270038F491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43331E219DFDD270038F491 /* PBXTargetDependency */,
+			);
+			name = BearWalkTests;
+			productName = BearWalkTests;
+			productReference = F43331E019DFDD270038F491 /* BearWalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F43331C819DFDD270038F491 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = CalHacks;
+				TargetAttributes = {
+					F43331CF19DFDD270038F491 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					F43331DF19DFDD270038F491 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F43331CF19DFDD270038F491;
+					};
+				};
+			};
+			buildConfigurationList = F43331CB19DFDD270038F491 /* Build configuration list for PBXProject "BearWalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F43331C719DFDD270038F491;
+			productRefGroup = F43331D119DFDD270038F491 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43331CF19DFDD270038F491 /* BearWalk */,
+				F43331DF19DFDD270038F491 /* BearWalkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F43331CE19DFDD270038F491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43331DB19DFDD270038F491 /* LaunchScreen.xib in Resources */,
+				F43331D819DFDD270038F491 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43331DE19DFDD270038F491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F43331CC19DFDD270038F491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43331D619DFDD270038F491 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43331DC19DFDD270038F491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43331E719DFDD270038F491 /* BearWalkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F43331E219DFDD270038F491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43331CF19DFDD270038F491 /* BearWalk */;
+			targetProxy = F43331E119DFDD270038F491 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F43331D919DFDD270038F491 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43331DA19DFDD270038F491 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F43331E819DFDD270038F491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F43331E919DFDD270038F491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F43331EB19DFDD270038F491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BearWalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F43331EC19DFDD270038F491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BearWalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F43331EE19DFDD270038F491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BearWalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BearWalk.app/BearWalk";
+			};
+			name = Debug;
+		};
+		F43331EF19DFDD270038F491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BearWalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BearWalk.app/BearWalk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F43331CB19DFDD270038F491 /* Build configuration list for PBXProject "BearWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43331E819DFDD270038F491 /* Debug */,
+				F43331E919DFDD270038F491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43331EA19DFDD270038F491 /* Build configuration list for PBXNativeTarget "BearWalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43331EB19DFDD270038F491 /* Debug */,
+				F43331EC19DFDD270038F491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F43331ED19DFDD270038F491 /* Build configuration list for PBXNativeTarget "BearWalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43331EE19DFDD270038F491 /* Debug */,
+				F43331EF19DFDD270038F491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F43331C819DFDD270038F491 /* Project object */;
+}
