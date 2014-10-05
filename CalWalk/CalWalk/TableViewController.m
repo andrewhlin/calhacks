@@ -36,6 +36,7 @@
 
 -(void)populateContactData{
     NSString *contactFullName = [NSString stringWithFormat:@"%@ %@", [_dictContactDetails objectForKey:@"firstName"], [_dictContactDetails objectForKey:@"lastName"]];
+    NSLog(@"value of number is%@",[_dictContactDetails objectForKey:@"firstName"]);
     
     [_lblContactName setText:contactFullName];
     
@@ -82,11 +83,15 @@
 
     if (_tableData == nil) {
         _tableData = [[NSMutableArray alloc] init];
+        printf("there");
     }
     [_tableData addObject:contactInfoDict];
     [self.tableView reloadData];
+    NSLog(@"value of number is%@",[contactInfoDict objectForKey:@"mobileNumber"]);
     [_picker dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 #pragma mark - Table view data source
 

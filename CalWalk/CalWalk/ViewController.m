@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface ViewController () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -22,6 +23,7 @@ MKRoute *routeDetails;
 int timeTick;
 int timer_value;
 bool hasprompt;
+NSTimer *timer;
 
 @synthesize mapView=_mapView;
 
@@ -39,6 +41,11 @@ bool hasprompt;
     _mapView.showsUserLocation = YES;
     _mapView.delegate = self;
     [_timer setDelegate:self];
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -87,11 +94,11 @@ bool hasprompt;
             [self.mapView setRegion:region animated:YES];
             [self addAnnotation:thePlacemark];
             MKDirectionsRequest *directions = [[MKDirectionsRequest alloc]init];
-            MKMapItem *source = [MKMapItem mapItemForCurrentLocation];
-            [directions setSource:source];
+            _source = [MKMapItem mapItemForCurrentLocation];
+            [directions setSource:_source];
             MKPlacemark *placemark = [[MKPlacemark alloc] initWithPlacemark:thePlacemark];
-            MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
-            [directions setDestination:destination];
+            _destination = [[MKMapItem alloc]initWithPlacemark:placemark];
+            [directions setDestination:_destination];
             directions.transportType = MKDirectionsTransportTypeWalking;
             MKDirections *finaldirections = [[MKDirections alloc] initWithRequest:directions];
             MKDirections *finaldirections2 = [[MKDirections alloc] initWithRequest:directions];
@@ -150,7 +157,7 @@ bool hasprompt;
     [_timer setEnabled: NO];
     NSString *time = _timer.text;
     timer_value = [time intValue];
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -168,13 +175,42 @@ bool hasprompt;
 -(void)tick {
     timeTick++;
     NSString *number = @"5863601035";
+    /*MKDirectionsRequest *directions = [[MKDirectionsRequest alloc]init];
+    _updatedsource =[MKMapItem mapItemForCurrentLocation];
+    [directions setSource:_updatedsource];
+    [directions setDestination:_destination];
+    directions.transportType = MKDirectionsTransportTypeWalking;
+    MKDirections *updateddirections = [[MKDirections alloc] initWithRequest:directions];
+    __block NSInteger time;
+    [updateddirections calculateETAWithCompletionHandler:^(MKETAResponse *response, NSError *error)
+     {
+         NSTimeInterval estimatedTravelTimeInSeconds = response.expectedTravelTime;
+         time = estimatedTravelTimeInSeconds;
+     }];
+    int myTime = time;
+    printf("%i", myTime);
+    if (myTime < 20) {
+        timeTick = timer_value + 1;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You have reached your destination."
+                                                        message:@"Congrats!"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    if (timeTick > timer_value) {
+        [timer invalidate];
+        [_timer setEnabled: YES];
+    }*/
+    
     if (timeTick == timer_value) {
         [_timer setEnabled: YES];
         NSString *phoneNumber = [@"tel://" stringByAppendingString:number];
+        NSArray *numbers = @[number];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
     }
     
-    if (timer_value - timeTick < 30 && hasprompt == false) {
+    else if (timer_value - timeTick < 30 && hasprompt == false && timeTick < timer_value) {
         hasprompt = true;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Close to Destination"
                                                         message:@"You have 30 seconds left to get home, would you like to add 5 more minutes?"

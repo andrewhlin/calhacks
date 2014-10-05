@@ -68,6 +68,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="destinationField" destination="eLL-f8-1cQ" id="der-Ap-JAX"/>
                         <outlet property="mapView" destination="U8i-IC-cnd" id="ICg-8m-O4e"/>
                         <outlet property="timer" destination="8OI-wI-lRb" id="O8g-OE-kOY"/>
                         <outlet property="walkme" destination="lKt-hW-OWr" id="W53-HA-LK2"/>
@@ -90,6 +91,14 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7g-U0-T7N" id="Par-gy-DtJ">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Michael Pletta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gj-LP-ktl">
+                                            <rect key="frame" x="22" y="11" width="109" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
