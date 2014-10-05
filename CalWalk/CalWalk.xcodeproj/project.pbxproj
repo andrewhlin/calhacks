@@ -16,6 +16,11 @@
 		F44FD88E19E0019100F2FCA7 /* CalWalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F44FD88D19E0019100F2FCA7 /* CalWalkTests.m */; };
 		F44FD89819E0047800F2FCA7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44FD89719E0047800F2FCA7 /* MapKit.framework */; };
 		F44FD89A19E0047F00F2FCA7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44FD89919E0047F00F2FCA7 /* CoreLocation.framework */; };
+		F44FD8A019E107DE00F2FCA7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44FD89D19E107DE00F2FCA7 /* Bolts.framework */; };
+		F44FD8A119E107DE00F2FCA7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44FD89E19E107DE00F2FCA7 /* Parse.framework */; };
+		F44FD8A219E107DE00F2FCA7 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44FD89F19E107DE00F2FCA7 /* ParseFacebookUtils.framework */; };
+		F4575EC519E16350000AB6DA /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4575EC319E16350000AB6DA /* TableViewController.m */; };
+		F4575EC619E16350000AB6DA /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4575EC419E16350000AB6DA /* TableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,12 @@
 		F44FD88D19E0019100F2FCA7 /* CalWalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalWalkTests.m; sourceTree = "<group>"; };
 		F44FD89719E0047800F2FCA7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F44FD89919E0047F00F2FCA7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F44FD89D19E107DE00F2FCA7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		F44FD89E19E107DE00F2FCA7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F44FD89F19E107DE00F2FCA7 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		F4575EC219E16350000AB6DA /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		F4575EC319E16350000AB6DA /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		F4575EC419E16350000AB6DA /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44FD8A019E107DE00F2FCA7 /* Bolts.framework in Frameworks */,
 				F44FD89A19E0047F00F2FCA7 /* CoreLocation.framework in Frameworks */,
+				F44FD8A119E107DE00F2FCA7 /* Parse.framework in Frameworks */,
+				F44FD8A219E107DE00F2FCA7 /* ParseFacebookUtils.framework in Frameworks */,
 				F44FD89819E0047800F2FCA7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +83,9 @@
 		F44FD86519E0019100F2FCA7 = {
 			isa = PBXGroup;
 			children = (
+				F44FD89D19E107DE00F2FCA7 /* Bolts.framework */,
+				F44FD89E19E107DE00F2FCA7 /* Parse.framework */,
+				F44FD89F19E107DE00F2FCA7 /* ParseFacebookUtils.framework */,
 				F44FD89919E0047F00F2FCA7 /* CoreLocation.framework */,
 				F44FD89719E0047800F2FCA7 /* MapKit.framework */,
 				F44FD87019E0019100F2FCA7 /* CalWalk */,
@@ -94,6 +111,9 @@
 				F44FD87819E0019100F2FCA7 /* ViewController.h */,
 				F44FD87919E0019100F2FCA7 /* ViewController.m */,
 				F44FD87B19E0019100F2FCA7 /* Main.storyboard */,
+				F4575EC219E16350000AB6DA /* TableViewController.h */,
+				F4575EC319E16350000AB6DA /* TableViewController.m */,
+				F4575EC419E16350000AB6DA /* TableViewController.xib */,
 				F44FD87E19E0019100F2FCA7 /* Images.xcassets */,
 				F44FD88019E0019100F2FCA7 /* LaunchScreen.xib */,
 				F44FD87119E0019100F2FCA7 /* Supporting Files */,
@@ -210,6 +230,7 @@
 				F44FD87D19E0019100F2FCA7 /* Main.storyboard in Resources */,
 				F44FD88219E0019100F2FCA7 /* LaunchScreen.xib in Resources */,
 				F44FD87F19E0019100F2FCA7 /* Images.xcassets in Resources */,
+				F4575EC619E16350000AB6DA /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +251,7 @@
 				F44FD87A19E0019100F2FCA7 /* ViewController.m in Sources */,
 				F44FD87719E0019100F2FCA7 /* AppDelegate.m in Sources */,
 				F44FD87419E0019100F2FCA7 /* main.m in Sources */,
+				F4575EC519E16350000AB6DA /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +378,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Simon/Downloads/GoogleMaps-iOS-1.8.1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CalWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -370,6 +393,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Simon/Downloads/GoogleMaps-iOS-1.8.1",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CalWalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -430,6 +454,7 @@
 				F44FD89319E0019100F2FCA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44FD89419E0019100F2FCA7 /* Build configuration list for PBXNativeTarget "CalWalkTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +463,7 @@
 				F44FD89619E0019100F2FCA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -20,6 +20,8 @@
 CLPlacemark *thePlacemark;
 MKRoute *routeDetails;
 int timeTick;
+int timer_value;
+bool hasprompt;
 
 @synthesize mapView=_mapView;
 
@@ -36,7 +38,13 @@ int timeTick;
     [self.locationManager startUpdatingLocation];
     _mapView.showsUserLocation = YES;
     _mapView.delegate = self;
-    
+    [_timer setDelegate:self];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 -(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -70,47 +78,44 @@ int timeTick;
             NSLog(@"%@", error);
         } else {
             thePlacemark = [placemarks lastObject];
-            float spanX = 1.00725;
-            float spanY = 1.00725;
+            float spanX = .5;
+            float spanY = .5;
             MKCoordinateRegion region;
             region.center.latitude = thePlacemark.location.coordinate.latitude;
             region.center.longitude = thePlacemark.location.coordinate.longitude;
             region.span = MKCoordinateSpanMake(spanX, spanY);
             [self.mapView setRegion:region animated:YES];
             [self addAnnotation:thePlacemark];
+            MKDirectionsRequest *directions = [[MKDirectionsRequest alloc]init];
+            MKMapItem *source = [MKMapItem mapItemForCurrentLocation];
+            [directions setSource:source];
+            MKPlacemark *placemark = [[MKPlacemark alloc] initWithPlacemark:thePlacemark];
+            MKMapItem *destination = [[MKMapItem alloc]initWithPlacemark:placemark];
+            [directions setDestination:destination];
+            directions.transportType = MKDirectionsTransportTypeWalking;
+            MKDirections *finaldirections = [[MKDirections alloc] initWithRequest:directions];
+            MKDirections *finaldirections2 = [[MKDirections alloc] initWithRequest:directions];
+            [finaldirections calculateETAWithCompletionHandler:^(MKETAResponse *response, NSError *error)
+             {
+                 NSTimeInterval estimatedTravelTimeInSeconds = response.expectedTravelTime;
+                 NSInteger time = estimatedTravelTimeInSeconds;
+                 NSString *strFromInt = [NSString stringWithFormat:@"%d",time];
+                 _timer.text = strFromInt;
+             }];
+            [finaldirections2 calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+                if (error) {
+                    // Handle Error
+                } else {
+                    [_mapView removeOverlays:_mapView.overlays];
+                    routeDetails = response.routes.lastObject;
+                    [self.mapView addOverlay:routeDetails.polyline];
+                }
+            }];
         }
     }];
 }
 
 
-
-- (IBAction)routeButtonPressed:(UIButton *)sender {
-    MKDirectionsRequest *directionsRequest = [[MKDirectionsRequest alloc] init];
-    MKPlacemark *placemark = [[MKPlacemark alloc] initWithPlacemark:thePlacemark];
-    [directionsRequest setSource:[MKMapItem mapItemForCurrentLocation]];
-    [directionsRequest setDestination:[[MKMapItem alloc] initWithPlacemark:placemark]];
-    directionsRequest.transportType = MKDirectionsTransportTypeAutomobile;
-    MKDirections *directions = [[MKDirections alloc] initWithRequest:directionsRequest];
-    [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
-        if (error) {
-            NSLog(@"Error %@", error.description);
-        } else {
-            routeDetails = response.routes.lastObject;
-            [self.mapView addOverlay:routeDetails.polyline];
-            self.destinationLabel.text = [placemark.addressDictionary objectForKey:@"Street"];
-            self.distanceLabel.text = [NSString stringWithFormat:@"%0.1f Miles", routeDetails.distance/1609.344];
-            self.transportLabel.text = [NSString stringWithFormat:@"%u" ,routeDetails.transportType];
-            self.allSteps = @"";
-            for (int i = 0; i < routeDetails.steps.count; i++) {
-                MKRouteStep *step = [routeDetails.steps objectAtIndex:i];
-                NSString *newStep = step.instructions;
-                self.allSteps = [self.allSteps stringByAppendingString:newStep];
-                self.allSteps = [self.allSteps stringByAppendingString:@"\n\n"];
-                self.steps.text = self.allSteps;
-            }
-        }
-    }];
-}
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     // If it's the user location, just return nil.
@@ -133,38 +138,51 @@ int timeTick;
     return nil;
 }
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id)overlay {
-    
-    if ([overlay isKindOfClass:[MKPolyline class]]) {
-        MKPolylineView* aView = [[MKPolylineView alloc]initWithPolyline:(MKPolyline*)overlay] ;
-        aView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
-        aView.lineWidth = 10;
-        return aView;
-    }
-    return nil;
-}
-
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
     MKPolylineRenderer  * routeLineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:routeDetails.polyline];
-    routeLineRenderer.strokeColor = [UIColor redColor];
+    routeLineRenderer.strokeColor = [UIColor blueColor];
     routeLineRenderer.lineWidth = 5;
     return routeLineRenderer;
 }
 - (IBAction)startWalk:(id)sender {
+    hasprompt = false;
     timeTick = 0;
     [_timer setEnabled: NO];
+    NSString *time = _timer.text;
+    timer_value = [time intValue];
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        hasprompt = true;
+        return;
+    }
+    if (buttonIndex == 1) {
+        timer_value += 300;
+        return;
+    }
 }
 
 
 -(void)tick {
     timeTick++;
-    NSString *time = _timer.text;
-    int timer_value = [time intValue];
     NSString *number = @"5863601035";
     if (timeTick == timer_value) {
+        [_timer setEnabled: YES];
         NSString *phoneNumber = [@"tel://" stringByAppendingString:number];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+    }
+    
+    if (timer_value - timeTick < 30 && hasprompt == false) {
+        hasprompt = true;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Close to Destination"
+                                                        message:@"You have 30 seconds left to get home, would you like to add 5 more minutes?"
+                                                       delegate:self
+                                              cancelButtonTitle:@"No"
+                                              otherButtonTitles:nil];
+        [alert addButtonWithTitle:@"Yes"];
+        [alert show];
     }
 }
 @end

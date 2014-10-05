@@ -10,18 +10,16 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate>
+@interface ViewController : UIViewController <MKMapViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UILabel *destinationLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *transportLabel;
-@property (weak, nonatomic) IBOutlet UITextView *steps;
 @property (weak, nonatomic) IBOutlet UITextField *timer;
 - (IBAction)startWalk:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *walkme;
 
 @property (strong, nonatomic) NSString *allSteps;
 
 - (IBAction)addressField:(UITextField *)sender;
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id)overlay;
 
 
 
